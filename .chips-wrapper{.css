@@ -1,0 +1,539 @@
+.chips-wrapper{
+    overflow-x: scroll;
+    display: flex;
+    padding-left: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.517);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.334);
+ 
+}
+
+.chips-wrapper::-webkit-scrollbar{
+    height: 0;
+}
+
+.chip{
+    margin: 12px 6px;
+    background-color: rgba(0, 0, 0, 0.047);
+    padding: 7px 12px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.828);
+    border-radius: 9px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: small;
+
+}
+
+.chip-special{
+    margin: 12px 6px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 12px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.828);
+    border-radius: 9px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
+}
+
+
+#special-chip{
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+
+.chip:hover{
+    background-color: #03030322;
+}
+
+
+.video-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 18px;
+    padding: 20px 20px;
+    background-color: #0f0f0f;
+    overflow-y: scroll;
+    height: calc(100vh - 116px);
+}
+
+.video-content-cover{
+    position: relative;
+    transition: .5s;
+    transition-delay: .09s;
+}
+
+.video-content-cover:hover{
+    transform: translateY(60px);
+    z-index: 999;
+}
+
+.video-content-cover:nth-child(4n+1):hover{
+    transform: translate(50px , 60px);
+    z-index: 999;
+}
+
+.video-content-cover:nth-child(4n+4):hover{
+    transform: translate(-30px , 60px);
+    z-index: 999;
+}
+
+
+.video-content{
+    margin-bottom: 25px;
+    position: relative;
+    transition: .5s;
+    width: 100%;
+}
+
+.video-content:hover{
+    transform: scale(1.5);
+    z-index: 5;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    background-color: #fff;
+}
+
+.video-content:hover .video-details{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.video-box img{
+    position: relative;
+    width: auto;
+    height: 145px;
+    display: block;
+    border-radius: 9px;
+}
+
+.channel-logo img{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.video-content:hover .channel-logo img{
+    min-width: 27px;
+    height: 27px;
+}
+
+.video-details{
+    display: flex;
+    color: black;
+    padding-top: 12px;
+}
+
+.detail{
+    margin-left: 12px;
+}
+
+
+.title{
+    font-size: 1.2rem;
+}
+
+.video-content:hover .title{
+    font-size: 1rem;
+}
+
+.channel-name{
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #606060;
+}
+
+.views-upload{
+    display: flex;
+    font-size: 1rem;
+    color: #606060;
+}
+
+.video-content:hover .views-upload{
+    font-size: 0.9rem;
+}
+
+.upload{
+    margin-left: 5px;
+}
+
+.hidden-content{
+    display: none;
+    padding: 5px 10px;
+}
+
+.video-content:hover .hidden-content{
+    display: block;
+
+}
+
+.btn{
+    padding: 5px 0 ;
+    color: black;
+    width: 100%;
+    background-color: #0303030c;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.btn i{
+    font-size: 1.7rem;
+    margin-right: 5px;
+    color: black;
+}
+
+
+
+
+<div class="content-area">
+<aside>
+   <nav>
+      <a href="" class="nav-link active">
+         <i class="material-icons-round">home</i>
+         <span id="active-span">Home</span>
+      </a>   
+      <a href="" class="nav-link">
+          <i class="material-icons-outlined">explore</i>
+          <span>Explore</span>
+      </a>  
+      <a href="" class="nav-link">
+          <i class="material-icons-outlined">subscriptions</i>
+          <span>Subscriptions</span>
+      </a>
+      <a href="" class="nav-link">
+          <i class="material-icons-outlined">ondemand_video</i>
+          <span>Originals</span>
+      </a> 
+      <a href="" class="nav-link">
+          <i class="material-icons">play_circle_outline</i>
+          <span>Youtube Music</span>
+      </a>
+      
+      <hr>
+
+      <a href="" class="nav-link">
+          <i class="material-icons-outlined">video_library</i>
+          <span>Library</span>
+      </a>
+      <a href="" class="nav-link">
+          <i class="material-icons">history</i>
+          <span>History</span>
+      </a>
+      <a href="" class="nav-link">
+          <i class="material-icons-outlined">smart_display</i>
+          <span>Your Videos</span>
+      </a>
+      <a href="" class="nav-link">
+          <i class="material-icons-outlined">watch_later</i>
+          <span>Watch later</span>
+      </a>
+      <a href="" class="nav-link">
+          <i class="material-icons-outlined">download</i>
+          <span>Downloads</span>
+      </a>
+      <a href="" class="nav-link">
+          <i class="material-icons-outlined">thumb_up</i>
+          <span>Liked videos</span>
+      </a>
+     
+      <hr>
+
+      <p>Subscriptions</p>
+      <a href="https://www.youtube.com/@Codezilla" class="nav-link">
+          <img class="channel-img" src="https://yt3.ggpht.com/ytc/AMLnZu8Ip6q1TqRVcpomlv7EAh2pwu8B9AXDUxVBqK_FFw=s88-c-k-c0x00ffffff-no-rj">
+          <span>Codezilla</span>
+      </a>
+      <a href="" class="nav-link">
+          <img class="channel-img" src="https://yt3.ggpht.com/ytc/AMLnZu-PfU1zMdDzxPxfUGJkEQAorjd_Cea8Fsm05aM2=s88-c-k-c0x00ffffff-no-rj">
+          <span>EvolveFitness</span>
+      </a>
+      <a href="" class="nav-link">
+          <img class="channel-img" src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s88-c-k-c0x00ffffff-no-rj">
+          <span>Motiversity</span>
+      </a>
+      <a href="" class="nav-link">
+          <img class="channel-img" src="https://yt3.ggpht.com/HNJVTTrJ1xVRtCWGOmLjREql8wyrOYOo1OjL6imp-9N6AQT5APnFNUaUxJA7FVILc2gl17FGCg=s88-c-k-c0x00ffffff-no-rj">
+          <span>Al-Ahly</span>
+      </a>
+      <a href="" class="nav-link">
+          <img class="channel-img" src="https://yt3.ggpht.com/OKCrWased_FI00em6BbJB8KChf7QmNRWGj8-c7Z9ZvV-Mj-abkpA7kdyrlSDZxGPctHC9l5zMg=s88-c-k-c0x00ffffff-no-rj">
+          <span>Sam Samouy</span>
+      </a>
+      <a href="" class="nav-link">
+          <img class="channel-img" src="https://yt3.ggpht.com/ytc/AMLnZu_L85xOD0CkFAB7ZTHURytnbu31hyScWcUV3sa8SQ=s88-c-k-c0x00ffffff-no-rj">
+          <span>Jeff Nippard</span>
+      </a>
+      <a href="" class="nav-link">
+          <img class="channel-img" src="https://yt3.ggpht.com/ytc/AMLnZu_3CcNeRc4RziS1ai21e44w3JtWzxTMtEBwE-XJqA=s88-c-k-c0x00ffffff-no-rj">
+          <span>NFrealmusic</span>
+      </a>
+   </nav>
+</aside>
+
+<div class="content">
+   <div class="chips-wrapper">
+      <div class="chip-special">
+          <p id="special-chip">All</p>
+      </div>
+      <div class="chip">
+          <p>HTML</p>
+      </div>
+      <div class="chip">
+          <p>CSS</p>
+      </div>
+      <div class="chip">
+          <p>Music</p>
+      </div>
+      <div class="chip">
+          <p>BodyBuilding</p>
+      </div>
+      <div class="chip">
+          <p>Al Ahly SC</p>
+      </div>
+      <div class="chip">
+          <p>Gaming</p>
+      </div>
+      <div class="chip">
+          <p>World Cup</p>
+      </div>
+      <div class="chip">
+          <p>ALan Walker</p>
+      </div>
+      <div class="chip">
+          <p>NFrealmusic</p>
+      </div>
+      <div class="chip">
+          <p>UI/UX</p>
+      </div>
+      <div class="chip">
+          <p>Durrah</p>
+      </div>
+      <div class="chip">
+          <p>twenty one pilots</p>
+      </div>
+      <div class="chip">
+          <p>Motiversity</p>
+      </div>
+      <div class="chip">
+          <p>Recently uploaded</p>
+      </div>
+      <div class="chip">
+          <p>New to you</p>
+      </div>
+   </div>
+
+  <div class="video-container">
+      <div class="video-content-cover">
+          <div class="video-content">
+              <a href="#" class="video-box">
+                  <img src="https://i.ytimg.com/vi/ft_DXwgUXB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKlaUFsi9ai5UmvS0n1vEWyuksiA" alt="">
+              </a>
+              <div class="video-details">
+                  <div class="channel-logo">
+                      <img src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+                  <div class="detail">
+                     <h3 class="title">SELF DISCIPLINE - Best Motivational Speech Video (Featuring Will Smith)</h3>
+                     <div class="channel-name">Motiversity</div>
+                     <div class="views-upload">
+                        <div class="views">10M views</div>
+                        <div class="upload">4 years ago</div>
+                     </div>
+                  </div>
+              </div>
+              <div class="hidden-content">
+                  <div class="btn"><i class="material-icons-outlined">watch_later</i>Watch later</div>
+                  <div class="btn"><i class="material-icons-outlined">queue</i>Add to queue</div>
+              </div>
+          </div>
+      </div>
+      <div class="video-content-cover">
+          <div class="video-content">
+              <a href="#" class="video-box">
+                  <img src="https://i.ytimg.com/vi/ft_DXwgUXB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKlaUFsi9ai5UmvS0n1vEWyuksiA" alt="">
+              </a>
+              <div class="video-details">
+                  <div class="channel-logo">
+                      <img src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+                  <div class="detail">
+                     <h3 class="title">SELF DISCIPLINE - Best Motivational Speech Video (Featuring Will Smith)</h3>
+                     <div class="channel-name">Motiversity</div>
+                     <div class="views-upload">
+                        <div class="views">10M views</div>
+                        <div class="upload">4 years ago</div>
+                     </div>
+                  </div>
+              </div>
+              <div class="hidden-content">
+                  <div class="btn"><i class="material-icons-outlined">watch_later</i>Watch later</div>
+                  <div class="btn"><i class="material-icons-outlined">queue</i>Add to queue</div>
+              </div>
+          </div>
+      </div>
+      <div class="video-content-cover">
+          <div class="video-content">
+              <a href="#" class="video-box">
+                  <img src="https://i.ytimg.com/vi/ft_DXwgUXB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKlaUFsi9ai5UmvS0n1vEWyuksiA" alt="">
+              </a>
+              <div class="video-details">
+                  <div class="channel-logo">
+                      <img src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+                  <div class="detail">
+                     <h3 class="title">SELF DISCIPLINE - Best Motivational Speech Video (Featuring Will Smith)</h3>
+                     <div class="channel-name">Motiversity</div>
+                     <div class="views-upload">
+                        <div class="views">10M views</div>
+                        <div class="upload">4 years ago</div>
+                     </div>
+                  </div>
+              </div>
+              <div class="hidden-content">
+                  <div class="btn"><i class="material-icons-outlined">watch_later</i>Watch later</div>
+                  <div class="btn"><i class="material-icons-outlined">queue</i>Add to queue</div>
+              </div>
+          </div>
+      </div>
+      <div class="video-content-cover">
+          <div class="video-content">
+              <a href="#" class="video-box">
+                  <img src="https://i.ytimg.com/vi/ft_DXwgUXB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKlaUFsi9ai5UmvS0n1vEWyuksiA" alt="">
+              </a>
+              <div class="video-details">
+                  <div class="channel-logo">
+                      <img src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+                  <div class="detail">
+                     <h3 class="title">SELF DISCIPLINE - Best Motivational Speech Video (Featuring Will Smith)</h3>
+                     <div class="channel-name">Motiversity</div>
+                     <div class="views-upload">
+                        <div class="views">10M views</div>
+                        <div class="upload">4 years ago</div>
+                     </div>
+                  </div>
+              </div>
+              <div class="hidden-content">
+                  <div class="btn"><i class="material-icons-outlined">watch_later</i>Watch later</div>
+                  <div class="btn"><i class="material-icons-outlined">queue</i>Add to queue</div>
+              </div>
+          </div>
+      </div>
+      <div class="video-content-cover">
+          <div class="video-content">
+              <a href="#" class="video-box">
+                  <img src="https://i.ytimg.com/vi/ft_DXwgUXB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKlaUFsi9ai5UmvS0n1vEWyuksiA" alt="">
+              </a>
+              <div class="video-details">
+                  <div class="channel-logo">
+                      <img src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+                  <div class="detail">
+                     <h3 class="title">SELF DISCIPLINE - Best Motivational Speech Video (Featuring Will Smith)</h3>
+                     <div class="channel-name">Motiversity</div>
+                     <div class="views-upload">
+                        <div class="views">10M views</div>
+                        <div class="upload">4 years ago</div>
+                     </div>
+                  </div>
+              </div>
+              <div class="hidden-content">
+                  <div class="btn"><i class="material-icons-outlined">watch_later</i>Watch later</div>
+                  <div class="btn"><i class="material-icons-outlined">queue</i>Add to queue</div>
+              </div>
+          </div>
+      </div>
+      <div class="video-content-cover">
+          <div class="video-content">
+              <a href="#" class="video-box">
+                  <img src="https://i.ytimg.com/vi/ft_DXwgUXB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKlaUFsi9ai5UmvS0n1vEWyuksiA" alt="">
+              </a>
+              <div class="video-details">
+                  <div class="channel-logo">
+                      <img src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+                  <div class="detail">
+                     <h3 class="title">SELF DISCIPLINE - Best Motivational Speech Video (Featuring Will Smith)</h3>
+                     <div class="channel-name">Motiversity</div>
+                     <div class="views-upload">
+                        <div class="views">10M views</div>
+                        <div class="upload">4 years ago</div>
+                     </div>
+                  </div>
+              </div>
+              <div class="hidden-content">
+                  <div class="btn"><i class="material-icons-outlined">watch_later</i>Watch later</div>
+                  <div class="btn"><i class="material-icons-outlined">queue</i>Add to queue</div>
+              </div>
+          </div>
+      </div>
+      <div class="video-content-cover">
+          <div class="video-content">
+              <a href="#" class="video-box">
+                  <img src="https://i.ytimg.com/vi/ft_DXwgUXB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKlaUFsi9ai5UmvS0n1vEWyuksiA" alt="">
+              </a>
+              <div class="video-details">
+                  <div class="channel-logo">
+                      <img src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+                  <div class="detail">
+                     <h3 class="title">SELF DISCIPLINE - Best Motivational Speech Video (Featuring Will Smith)</h3>
+                     <div class="channel-name">Motiversity</div>
+                     <div class="views-upload">
+                        <div class="views">10M views</div>
+                        <div class="upload">4 years ago</div>
+                     </div>
+                  </div>
+              </div>
+              <div class="hidden-content">
+                  <div class="btn"><i class="material-icons-outlined">watch_later</i>Watch later</div>
+                  <div class="btn"><i class="material-icons-outlined">queue</i>Add to queue</div>
+              </div>
+          </div>
+      </div>
+      <div class="video-content-cover">
+          <div class="video-content">
+              <a href="#" class="video-box">
+                  <img src="https://i.ytimg.com/vi/ft_DXwgUXB0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKlaUFsi9ai5UmvS0n1vEWyuksiA" alt="">
+              </a>
+              <div class="video-details">
+                  <div class="channel-logo">
+                      <img src="https://yt3.ggpht.com/35nHO2heMWujuaFjFEBXPSoKpCyMgeU1BxqKh8RimOTCP_DdF-hFx9ATkYuY89gSKQFcSOM=s68-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+                  <div class="detail">
+                     <h3 class="title">SELF DISCIPLINE - Best Motivational Speech Video (Featuring Will Smith)</h3>
+                     <div class="channel-name">Motiversity</div>
+                     <div class="views-upload">
+                        <div class="views">10M views</div>
+                        <div class="upload">4 years ago</div>
+                     </div>
+                  </div>
+              </div>
+              <div class="hidden-content">
+                  <div class="btn"><i class="material-icons-outlined">watch_later</i>Watch later</div>
+                  <div class="btn"><i class="material-icons-outlined">queue</i>Add to queue</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
